@@ -28,7 +28,7 @@ const teamMembers: TeamMember[] = [
 
 export default function CoreteamSection() {
   const [activeIndex, setActiveIndex] = useState(1);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const isPaused = useRef(false);
   const touchStartX = useRef<number | null>(null);
   const touchEndX = useRef<number | null>(null);
@@ -63,7 +63,9 @@ export default function CoreteamSection() {
     intervalRef.current = setInterval(() => {
       if (!isPaused.current) nextSlide();
     }, 3000);
-    return () => clearInterval(intervalRef.current!);
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
   }, []);
 
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -97,7 +99,8 @@ export default function CoreteamSection() {
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
-      id="coreteam">
+      id="coreteam"
+    >
       <h2 className={styles.title}>КОМАНДА ОРГАНІЗАТОРІВ</h2>
       <div className={styles.sliderContainer}>
         <button onClick={prevSlide} className={`${styles.arrow} ${styles.left}`}>
