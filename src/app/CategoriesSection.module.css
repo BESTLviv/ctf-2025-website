@@ -87,14 +87,12 @@
     .categoriesSection {
     background-color: #000;
     color: #fff;
-    padding: 40px 20px;
+    padding: 80px 20px !important;
     text-align: center;
     font-family: 'Orbitron', sans-serif; 
     min-height: 500px; 
     position: relative; 
-    overflow-x: hidden; 
-    overflow-y: visible; 
-
+    overflow: visible
 
 }
     .sectionTitle {

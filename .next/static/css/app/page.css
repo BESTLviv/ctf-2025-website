@@ -1061,9 +1061,9 @@
         padding-left: 10px;
         padding-right: 10px;
         padding-top: 30px!important;
+        padding-bottom: 60px!important;
         height: 50vh !important; 
-
-        overflow-x: visible;
+        overflow: visible;
     }
 
     .FormatSection_formatContent__a2Bss {
@@ -4047,14 +4047,12 @@
     .CategoriesSection_categoriesSection__0wIgc {
     background-color: #000;
     color: #fff;
-    padding: 40px 20px;
+    padding: 80px 20px !important;
     text-align: center;
     font-family: 'Orbitron', sans-serif; 
     min-height: 500px; 
     position: relative; 
-    overflow-x: hidden; 
-    overflow-y: visible; 
-
+    overflow: visible
 
 }
     .CategoriesSection_sectionTitle__uH1JE {

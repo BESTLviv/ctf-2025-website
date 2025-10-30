@@ -151,9 +151,9 @@
         padding-left: 10px;
         padding-right: 10px;
         padding-top: 30px!important;
+        padding-bottom: 60px!important;
         height: 50vh !important; 
-
-        overflow-x: visible;
+        overflow: visible;
     }
 
     .formatContent {
