@@ -14,6 +14,7 @@
     font-size: 3.5rem;
     margin-bottom: 80px; 
     color: #fff;
+    overflow: visible;
 }
 
 .blocksContainer {
@@ -25,10 +26,12 @@
     perspective: 1200px; 
     cursor: grab; 
     touch-action: none; 
+    overflow: visible;
 }
 
 .blocksContainer.dragging {
     cursor: grabbing;
+    overflow: visible;
 }
 
 .categoryBlockBase { 
@@ -51,6 +54,7 @@
     transform-style: preserve-3d;
     backface-visibility: hidden;
     will-change: transform; 
+    overflow: visible;
 }
 
 .categoryBlockBase:hover {
@@ -83,13 +87,15 @@
     .categoriesSection {
     background-color: #000;
     color: #fff;
-    padding: 20px 20px;
+    padding: 40px 20px;
     text-align: center;
     font-family: 'Orbitron', sans-serif; 
     min-height: 500px; 
     position: relative; 
     overflow-x: hidden; 
     overflow-y: visible; 
+
+
 }
     .sectionTitle {
         font-size: 2.5rem;

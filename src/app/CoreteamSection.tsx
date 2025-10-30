@@ -97,7 +97,7 @@ export default function CoreteamSection() {
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
-    >
+      id="coreteam">
       <h2 className={styles.title}>КОМАНДА ОРГАНІЗАТОРІВ</h2>
       <div className={styles.sliderContainer}>
         <button onClick={prevSlide} className={`${styles.arrow} ${styles.left}`}>

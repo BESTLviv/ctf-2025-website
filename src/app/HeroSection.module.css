@@ -84,7 +84,7 @@
 
 
 .heroTitle {
-    font-family: 'Tektur';
+    font-family: 'Barlow';
     font-size: 4rem;
     line-height: 0.9;
     margin-bottom: 1.5rem;
@@ -93,7 +93,7 @@
 }
 
 .titleBest {
-    font-family: 'Tektur';
+    font-family: 'Barlow';
     display: block;
     font-weight: 500;
     margin-top: 25px;
@@ -102,7 +102,7 @@
 }
 
 .titleCTF {
-    font-family: 'Tektur';
+    font-family: 'Barlow';
     display: block;
     font-weight: 500;
     margin-top: 25px;

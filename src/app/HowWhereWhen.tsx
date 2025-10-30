@@ -14,10 +14,10 @@ const cardsData: InfoData[] = [
   },
   {
     header: "ТРИВАЛІСТЬ ЗМАГАНЬ",
-    value: "6 годин", 
+    value: "5 годин", 
   },
   {
-    header: "ФОРМАТ",
+    header: "ФОРМАТ ЗМАГАНЬ",
     value: "офлайн",
   },
 ];

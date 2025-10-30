@@ -457,7 +457,7 @@
 
 
 .HeroSection_heroTitle__nAyP6 {
-    font-family: 'Tektur';
+    font-family: 'Barlow';
     font-size: 4rem;
     line-height: 0.9;
     margin-bottom: 1.5rem;
@@ -466,7 +466,7 @@
 }
 
 .HeroSection_titleBest__a_5dn {
-    font-family: 'Tektur';
+    font-family: 'Barlow';
     display: block;
     font-weight: 500;
     margin-top: 25px;
@@ -475,7 +475,7 @@
 }
 
 .HeroSection_titleCTF__zmlba {
-    font-family: 'Tektur';
+    font-family: 'Barlow';
     display: block;
     font-weight: 500;
     margin-top: 25px;
@@ -3463,7 +3463,7 @@
   display: -webkit-box;
   line-clamp: 2;
   -webkit-box-orient: vertical;
-  overflow: hidden;
+  overflow: visible;
   text-overflow: ellipsis;
 }
 
@@ -3471,6 +3471,7 @@
   margin-top: 10px;
   opacity: 0.8;
   transition: opacity 0.3s ease, transform 0.2s ease;
+  overflow: visible;
 }
 
 .CoreteamSection_instagram__U_mLw:hover {
@@ -3558,6 +3559,8 @@
 }
 
 .Swiper_swiperContainer__IPjCV {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   position: relative;
 }
 
@@ -3969,6 +3972,7 @@
     font-size: 3.5rem;
     margin-bottom: 80px; 
     color: #fff;
+    overflow: visible;
 }
 
 .CategoriesSection_blocksContainer__x6SBb {
@@ -3980,10 +3984,12 @@
     perspective: 1200px; 
     cursor: grab; 
     touch-action: none; 
+    overflow: visible;
 }
 
 .CategoriesSection_blocksContainer__x6SBb.CategoriesSection_dragging__4ZWz0 {
     cursor: grabbing;
+    overflow: visible;
 }
 
 .CategoriesSection_categoryBlockBase__ayhFq { 
@@ -4008,6 +4014,7 @@
     transform-style: preserve-3d;
     backface-visibility: hidden;
     will-change: transform; 
+    overflow: visible;
 }
 
 .CategoriesSection_categoryBlockBase__ayhFq:hover {
@@ -4040,13 +4047,15 @@
     .CategoriesSection_categoriesSection__0wIgc {
     background-color: #000;
     color: #fff;
-    padding: 20px 20px;
+    padding: 40px 20px;
     text-align: center;
     font-family: 'Orbitron', sans-serif; 
     min-height: 500px; 
     position: relative; 
     overflow-x: hidden; 
     overflow-y: visible; 
+
+
 }
     .CategoriesSection_sectionTitle__uH1JE {
         font-size: 2.5rem;
