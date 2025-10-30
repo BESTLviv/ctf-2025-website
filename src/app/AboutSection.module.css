@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Miniver&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Passion+One:wght@400;700;900&family=Petrona:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Tektur:wght@400..900&display=swap');
+@keyframes ctf-scroll {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%); 
+    }
+}
+
+.aboutSection {
+  padding: 0 0 7rem 0; 
+  color: #fff;
+  background-color: var(--background);
+  overflow-x: hidden; 
+  overflow-y: visible; 
+  position: relative;
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start;
+  width: 100%; 
+  max-width: none; 
+  min-height: 80vh;
+}
+
+.aboutSection::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 500px; 
+  height: 500px;
+  background: radial-gradient(circle at bottom left, #d50505 0%, rgba(194, 2, 2, 0.4) 30%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(80px); 
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.aboutSection::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle at top right, #ff0000 0%, rgba(194, 2, 2, 0.3) 30%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(70px);
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.contentWrapper {
+  max-width: 1400px;
+  margin: 0 auto; 
+  width: 90%; 
+  overflow-x: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.registerButtonManual {
+    position: relative;
+    z-index: 10;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+    
+    height: 70px;
+    min-width: 380px;
+    padding: 0 20px;
+    margin: 20px 0 -35px 0; 
+    background-color: #A80505; 
+    border: none;
+    cursor: pointer;
+    
+    clip-path: polygon(0% 10%, 10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%); 
+    
+    border: 2px solid #FF0000; 
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), inset 0 0 5px rgba(255, 255, 255, 0.3); 
+
+    transition: transform 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.registerButtonManual:hover {
+    transform: scale(1.05); 
+    background-color: #C70912; 
+}
+
+.separatorLine {
+    width: 100vw; 
+    height: 2px;
+    background-color: #FF0000;
+    box-shadow: 0 0 8px #FF0000;
+    position: relative;
+    margin-left: calc(50% - 50vw); 
+    z-index: 5;
+    margin-bottom: 20px; 
+}
+
+.mainContentFrame {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 900px; 
+    max-width: 90%; 
+    height: 400px; 
+    margin: 2rem auto; 
+    z-index: 1; 
+}
+
+.textFrameContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutFrameImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill; 
+    z-index: 1;
+}
+
+.textInsideFrame {
+    position: relative;
+    z-index: 2; 
+    padding: 40px 80px 30px 80px; 
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    max-width: 700px; 
+    color: #fff;
+}
+
+.frameParagraph {
+    margin: 0; 
+}
+
+.ctfTickerStrip {
+    background-color: #550000; 
+    width: 100vw; 
+    margin-left: calc(50% - 50vw); 
+    max-width: none; 
+    height: 40px; 
+    overflow: hidden; 
+    position: relative; 
+    margin-top: 5rem; 
+    display: flex;
+    align-items: center; 
+    padding: 0;
+    left: 0; 
+    transform: rotate(5deg); 
+    transform-origin: center center; 
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.9); 
+}
+
+.ctfTickerContent {
+    position: absolute;
+    white-space: nowrap; 
+    font-family: 'Orbitron', sans-serif; 
+    font-size: 2.5rem; 
+    color: #000000; 
+    animation: ctf-scroll 80s linear infinite; 
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.5); 
+    letter-spacing: 5px; 
+    user-select: none; 
+    font-weight: 600; 
+    opacity: 0.9; 
+    min-width: 200%; 
+}
+
+@media (max-width: 1280px) {
+    .registerButtonManual {
+        font-size: 1.6rem;
+        height: 65px;
+        min-width: 350px;
+        margin-bottom: -35px;
+    }
+    .separatorLine {
+        margin-bottom: 15px;
+    }
+    .mainContentFrame {
+        width: 800px;
+        height: 380px;
+    }
+    .textInsideFrame {
+        padding: 35px 70px 25px 70px;
+        font-size: 1rem;
+    }
+    .ctfTickerStrip {
+        height: 35px; 
+        margin-top: 4rem; 
+        animation-duration: 40s; 
+    }
+    .ctfTickerContent {
+        font-size: 2.2rem; 
+        letter-spacing: 3px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .registerButtonManual {
+        font-size: 1.4rem;
+        height: 60px;
+        min-width: 320px;
+        margin-bottom: -35px;
+    }
+    .separatorLine {
+        margin-bottom: 10px;
+    }
+    .mainContentFrame {
+        width: 650px; 
+        max-width: 95%; 
+        height: 350px;
+    }
+    .textInsideFrame {
+        padding: 40px 60px 30px 60px;
+        font-size: 0.95rem;
+    }
+    .ctfTickerStrip {
+        height: 30px; 
+        margin-top: 3.5rem; 
+        transform: rotate(7deg);
+        animation-duration: 35s; 
+    }
+    .ctfTickerContent {
+        font-size: 1.8rem; 
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 0 0 0.5rem 0; 
+    overflow: visible;
+    min-height: 60vh;
+  }
+
+  .aboutSection::before {
+    bottom: 0;
+    left: -200px;
+    width: 300px; 
+    height: 300px;
+    background: radial-gradient(circle at bottom left, #d5050550 0%, rgba(194, 2, 2, 0.1) 50%, rgba(0, 0, 0, 0) 80%);
+    filter: blur(25px);
+  }
+
+  .aboutSection::after {
+    top: 50%;
+    right: -200px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle at top right, #ff000050 0%, rgba(194, 2, 2, 0.1) 50%, rgba(0, 0, 0, 0) 80%);
+    filter: blur(25px);
+  }
+
+  .registerButtonManual {
+        font-size: 1.1rem;
+        height: 50px;
+        min-width: 150px;
+        letter-spacing: 1px;
+        margin-bottom: -25px;
+    }
+    .separatorLine {
+        margin-bottom: 5px;
+    }
+  .mainContentFrame {
+    padding: 0; 
+    width: 100%; 
+    max-width: 85%; 
+    height: auto; 
+    margin: 1.5rem auto;
+    overflow: visible;
+  }
+
+  .textInsideFrame {
+    padding: 40px 30px 30px 30px; 
+    font-size: 0.7rem;
+    gap: 10px;
+  }
+
+  .ctfTickerStrip {
+        height: 25px; 
+        margin-top: 3rem; 
+        transform: rotate(10deg); 
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+        animation-duration: 30s; 
+    }
+    .ctfTickerContent {
+        font-size: 1.3rem; 
+        letter-spacing: 1px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .aboutSection::before {
+        width: 800px;
+        height: 800px; 
+        filter: blur(120px);
+    }
+    .aboutSection::after {
+        width: 700px;
+        height: 700px;
+        filter: blur(100px); 
+    }
+    
+  .registerButtonManual {
+        font-size: 3rem; 
+        height: 120px; 
+        min-width: 650px; 
+        margin-bottom: -60px; 
+    }
+    .separatorLine {
+        height: 3px; 
+        width: 100vw; 
+        margin-left: calc(50% - 50vw); 
+        margin-bottom: 40px; 
+    }
+  .mainContentFrame {
+    width: 1200px; 
+    height: 550px; 
+    margin: 2rem auto; 
+  }
+  .textInsideFrame {
+    padding: 60px 120px 50px 120px; 
+    font-size: 1.5rem; 
+    gap: 20px;
+    max-width: 1000px;
+  }
+  .ctfTickerStrip {
+      height: 60px; 
+      margin-top: 8rem; 
+      transform: rotate(0deg); 
+      animation-duration: 60s; 
+      width: 100vw; 
+      margin-left: calc(50% - 50vw); 
+  }
+  .ctfTickerContent {
+      font-size: 4rem; 
+  }
+}

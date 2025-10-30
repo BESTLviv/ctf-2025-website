@@ -1,0 +1,536 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Miniver&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Passion+One:wght@400;700;900&family=Petrona:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Tektur:wght@400..900&display=swap');
+
+.heroSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    min-height: calc(100vh - 60px);
+    height: auto;
+    overflow: visible;
+    padding: 0 16px;
+    position: relative;
+    top: 0;
+    padding-top: 121px;
+}
+
+.heroSection::before {
+    content: '';
+    position: absolute;
+    bottom: 50px;
+    left: -50px;
+    width: 400px;  
+    height: 600px; 
+    background: radial-gradient(circle at bottom left, 
+                                #ff0000 0%,         
+                                rgba(194, 2, 2, 0.4) 30%, 
+                                rgba(0, 0, 0, 0) 70%     
+                              );
+    
+    filter: blur(80px); 
+    opacity: 0.6; 
+    z-index: 0;
+    transition: opacity 0.5s, filter 0.5s;
+}
+
+.heroContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+    min-height: calc(100vh - 120px);
+    position: relative;
+    z-index: 1;
+    overflow-x: visible;
+}
+
+.Uppertext {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+    margin-bottom: 1rem; 
+}
+
+.UppertitleContainer1 {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+}
+
+.UppertitleContainer2 {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+}
+
+.heroText {
+    flex: 1.5;
+    text-align: left;
+    padding: 1.5em;
+    z-index: 2;
+    position: relative;
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    background-size: 100% 100%;
+    margin-top: -100px;
+    margin-left: 70px;
+    overflow-x: visible;
+    word-break: break-word; 
+}
+
+
+.heroTitle {
+    font-family: 'Tektur';
+    font-size: 4rem;
+    line-height: 0.9;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    
+}
+
+.titleBest {
+    font-family: 'Tektur';
+    display: block;
+    font-weight: 500;
+    margin-top: 25px;
+    overflow-y: hidden;
+    white-space: normal; 
+}
+
+.titleCTF {
+    font-family: 'Tektur';
+    display: block;
+    font-weight: 500;
+    margin-top: 25px;
+    overflow-y: hidden;
+    width: auto; 
+    white-space: normal; 
+}
+
+.redC,
+.redT,
+.redF {
+    color: #e30000; 
+}
+
+.heroQuote {
+    font-family: 'Barlow', sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    position: relative;
+    margin-top: 1rem; 
+}
+
+.heroSubtitleContainer {
+    display: flex;
+    justify-content: left;
+    overflow-x: visible;
+}
+
+.calendarIcon {
+    position: relative;
+    width: 30px;
+    height: auto;
+    margin-right: 17px;
+    padding-bottom: 15px;
+    top: 27px;
+    overflow-x: visible;
+}
+
+.heroSubtitle {
+    position: relative;
+    top: 20px;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 0px;
+    line-height: 1.1;
+    font-weight: 200;
+    font-family: 'Barlow', sans-serif;
+    overflow-x: visible;
+}
+
+.heroButton {
+    display: inline-block;
+    margin-top: 60px;
+    padding: 8px 12px;
+    background-color: transparent;
+    color: var(--foreground);
+    text-decoration: none;
+    font-size: clamp(1em, 2vw, 1.2em);
+    z-index: 3;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 200px;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow-x: visible;
+}
+
+.heroButton:hover {
+    transform: scale(1.05);
+}
+
+.heroButton::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: calc(100% + 8px);
+    height: calc(100% + 4px);
+    background-color: #a21616df;
+    -webkit-clip-path: polygon(7% 0%, 92% 0%, 100% 30%, 100% 100%, 0% 100%, 0% 25%);
+    clip-path: polygon(7% 0%, 92% 0%, 100% 30%, 100% 100%, 0% 100%, 0% 25%);
+    border: 2px solid #850202;
+    z-index: -1;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                background-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-origin: center;
+    overflow-x: visible;
+}
+
+.heroButton:hover::before {
+    background-color: #be0909;
+    box-shadow: 0 0 5px 2px rgba(255, 0, 0, 0.3),
+                0 0 10px 4px rgba(255, 0, 0, 0.5),
+                0 0 15px 6px rgba(255, 0, 0, 0.7);
+}
+
+.heroMask {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: relative;
+    overflow: visible;
+    height: auto;
+    width: 100%;
+    opacity: 0.55;
+    height: 100%;
+    overflow-x: visible;
+}
+
+.heroMaskImage {
+    margin-right: 100px;
+    width: 100%;
+    height: 133vh;
+    object-fit: cover;
+    position: absolute;
+    top: -720px;
+    right: -20%;
+    z-index: 3000;
+    overflow-x: visible;
+}
+
+.heroCode {
+     display: none; 
+}
+.bottomHeroArea {
+    position: absolute; 
+    bottom: 0;          
+    left: 0;
+    width: 100%;       
+    display: flex;
+    justify-content: center; 
+    padding-bottom: 30px; 
+    z-index: 10;        
+    pointer-events: none; 
+}
+
+.bottomHeroArea::before {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 10px; 
+    background: linear-gradient(to right, 
+                                transparent 0%, 
+                                #e30000 20%, 
+                                #e30000 80%, 
+                                transparent 100%); 
+    z-index: 9; 
+    pointer-events: none; 
+}
+
+.bottomRegisterButton {
+    background-color: #e30000; 
+    color: #fff; 
+    padding: 1.2rem 4rem;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    z-index: 11;
+    pointer-events: auto; 
+    clip-path: polygon(
+        10% 0%,      
+        90% 0%,      
+        100% 25%,   
+        100% 75%,     
+        90% 100%,     
+        10% 100%,     
+        0% 75%,       
+        0% 25%      
+    );
+    box-shadow: 0 0 0 2px #e30000; 
+}
+
+
+@media (max-width: 1280px) {
+    .heroSection {
+        padding-top: 100px;
+        overflow: visible;
+    }
+
+    .heroContent {
+        max-width: 1100px;
+    }
+
+    .heroText {
+        max-width: 50%;
+        margin-left: 50px;
+    }
+
+    .heroTitle {
+        font-size: 48px;
+    }
+
+    .heroQuote {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+
+    .heroSubtitle {
+        font-size: 35px;
+    }
+
+    .calendarIcon {
+        width: 28px;
+        margin-right: 15px;
+    }
+
+    .heroButton {
+        padding: 7px 10px;
+        max-width: 180px;
+    }
+
+    .heroMaskImage {
+        width: 75%;
+        height: 90vh;
+        top: -500px;
+        right: -15%;
+        margin-right: 80px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .heroSection {
+        padding-top: 90px;
+    }
+
+    .heroContent {
+        max-width: 900px;
+    }
+
+    .heroText {
+        max-width: 55%;
+        margin-left: 40px;
+    }
+
+    .heroTitle {
+        font-size: 42px;
+    }
+
+    .heroQuote {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .heroSubtitle {
+        font-size: 30px;
+    }
+
+    .calendarIcon {
+        width: 25px;
+        margin-right: 12px;
+    }
+
+    .heroButton {
+        padding: 6px 8px;
+        max-width: 160px;
+        font-size: clamp(0.9em, 1.8vw, 1em);
+    }
+
+    .heroMaskImage {
+        width: 80%;
+        height: 100vh;
+        top: -700px;
+        right: -10%;
+        margin-right: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroSection {
+        min-height: calc(100vh - 50px);
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .heroSection::before {
+        left: auto;     
+        right: -50px;   
+        bottom: 50px;  
+        
+        background: radial-gradient(circle at bottom right, 
+                                    #ff0000 0%,         
+                                    rgba(194, 2, 2, 0.4) 30%, 
+                                    rgba(0, 0, 0, 0) 70%      
+                                  );
+        
+        width: 300px;
+        height: 400px;
+        filter: blur(60px);
+        opacity: 0.4;
+    }
+
+    .heroContent {
+        flex-direction: column;
+        min-height: auto;
+        text-align: left; 
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .heroText {
+        flex: 1;
+        max-width: 100%;
+        padding: 16px 0; 
+        margin-left: 0;
+        align-items: flex-start; 
+        text-align: left;
+        margin-top: 40px;
+    }
+
+     .Uppertext,
+    .heroSubtitleContainer {
+        justify-content: flex-start;
+        width: 100%; 
+    }
+
+    .heroTitle {
+        font-size: 35px;
+        text-align: left; 
+    }
+    .heroQuote {
+        font-size: 16px;
+        text-align: left; 
+    }
+
+    .heroButton {
+        margin: 30px 0; 
+        align-self: flex-start; 
+    }
+
+    .heroCode {
+        display: block; 
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 105%;
+        height: 100vh;
+        background: url('/images/kod.png') repeat;
+        background-size: cover;
+        z-index: -1;
+        top: -270px;
+    }
+
+    .heroMask {
+        display: none !important;
+    }
+
+    .heroMaskImage {
+        display: none !important;
+    }
+    
+}
+
+@media (min-width: 2560px) {
+    .heroSection {
+        padding: 0 24px;
+        padding-top: 150px;
+        min-height: calc(100vh - 80px);
+    }
+
+    .heroContent {
+        max-width: 1800px;
+        min-height: calc(100vh - 150px);
+    }
+
+    .heroText {
+        max-width: 45%;
+        padding: 2em;
+        margin-left: 100px;
+        margin-top: -40px;
+    }
+
+    .heroTitle {
+        font-size: 70px;
+        letter-spacing: 3px;
+    }
+
+    .heroQuote {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+
+    .heroSubtitle {
+        font-size: 50px;
+        top: 25px;
+    }
+
+    .calendarIcon {
+        width: 40px;
+        margin-right: 20px;
+        padding-bottom: 20px;
+        top: 30px;
+    }
+
+    .heroButton {
+        margin-top: 80px;
+        padding: 10px 16px;
+        max-width: 250px;
+        font-size: clamp(1.2em, 2.5vw, 1.5em);
+    }
+
+    .heroCode {
+        width: 57.4%;
+        height: 120%;
+        top: -200px;
+    }
+
+    .heroMask {
+        flex: 1;
+        opacity: 0.55;
+    }
+
+    .heroMaskImage {
+        width: 90%;
+        height: 105vh;
+        top: -650px;
+        right: -30%;
+        margin-right: 100px;
+    }
+}
+

@@ -1,0 +1,121 @@
+.categoriesSection {
+    background-color: #000;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif; 
+    min-height: 600px; 
+    position: relative; 
+    overflow-x: hidden; 
+    overflow-y: visible; 
+}
+
+.sectionTitle {
+    font-size: 3.5rem;
+    margin-bottom: 80px; 
+    color: #fff;
+}
+
+.blocksContainer {
+    width: 100%; 
+    max-width: 900px; 
+    height: 450px;
+    margin: 0 auto; 
+    position: relative;
+    perspective: 1200px; 
+    cursor: grab; 
+    touch-action: none; 
+}
+
+.blocksContainer.dragging {
+    cursor: grabbing;
+}
+
+.categoryBlockBase { 
+    position: absolute; 
+    background-color: #550000; 
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid #ff0000; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 0, 0, 0.6); 
+    
+    transition: box-shadow 0.2s ease, z-index 0.01s ease-out, transform 0.3s ease-out; 
+    
+    cursor: grab;
+    user-select: none; 
+    
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    will-change: transform; 
+}
+
+.categoryBlockBase:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7), 0 0 15px rgba(255, 0, 0, 0.8);
+    cursor: grab;
+}
+
+.categoryBlockBase.dragging {
+    cursor: grabbing;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 1);
+    transition: box-shadow 0.2s ease, z-index 0.01s ease-out; 
+}
+
+.line {
+    position: absolute;
+    bottom: 170px; 
+    left: 0; 
+    width: 100%;
+    height: 3px;
+    background-color: #ff0000;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    z-index: 0; 
+}
+
+.activityText {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .categoriesSection {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 20px;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif; 
+    min-height: 500px; 
+    position: relative; 
+    overflow-x: hidden; 
+    overflow-y: visible; 
+}
+    .sectionTitle {
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+    }
+    
+    .blocksContainer {
+        width: 300px; 
+        max-width: 90%; 
+        height: 300px; 
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden; 
+    }
+    
+    .categoryBlockBase {
+        font-size: 0.8rem; 
+        font-weight: 600;
+    }
+    
+    .line {
+        bottom: 50px; 
+    }
+    
+    .activityText {
+        font-size: 0.85rem;
+        padding: 0 10px;
+    }
+}

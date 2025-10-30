@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Miniver&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Passion+One:wght@400;700;900&family=Petrona:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Tektur:wght@400..900&display=swap');
+
+.formatSection {
+    padding: 40px 80px;
+    color: #fff;
+    text-align: center;
+    overflow: visible;
+    position: relative;
+    min-height: 50vh; 
+    background: transparent;
+    overflow-x: visible;
+}
+
+.formatContent {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    overflow-x: visible;
+}
+
+.formatContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px 20px;
+    overflow-x: visible;
+}
+
+.fingerprintFrame {
+    position: relative;
+    bottom: 70px;
+    right: 40px;
+    margin: 20px 0;
+    z-index: 0;
+    opacity: 0.8;
+    overflow-x: visible;
+    z-index: 9;
+}
+
+.frame {
+    position: relative;
+    top: 50px;
+    right: 180px;
+    align-items: center;
+    padding: 35px;
+    background-image: url('/images/frame.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    overflow-x: visible;
+}
+
+.frame h1 {
+    overflow-y: hidden;
+    position: relative;
+    font-size: 36px;
+    bottom: 59px;
+}
+
+.frame p {
+    position: relative;
+    left: 20px;
+    bottom: 4px;
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 80px;
+    margin-left: 50px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    font-weight: 300;
+    z-index: 23;
+    overflow-x: visible;
+}
+
+.highlightRed {
+    color: #cb0505;
+    font-weight: 700;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+    font-weight: 900;
+    
+}
+
+.highlightRed:hover {
+    transform: scale(1.1);
+    color: #e10202;
+}
+
+.jeopardyFont {
+    font-family: 'Tektur';
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.fingerprintImage {
+    transition: transform 0.3s ease;
+    overflow-x: visible;
+}
+
+.fingerprintFrame:hover .fingerprintImage {
+    transform: scale(1.1);
+}
+
+@media (max-width: 1239px) and (min-width: 769px) {
+    .formatContainer {
+        flex-direction: column;
+        align-items: center;
+        min-height: 30vh;
+    }
+
+    .frame {
+        background-image: none;
+        top: 0;
+        right: 0;
+        padding: 1rem;
+        border: 3px solid #d6170d;
+        box-shadow: 10px 5px 10px #a40b0baf, 0 0 20px #c10303, 0 0 30px #df4646;
+        margin: 0 auto;
+        min-width: 600px;
+        max-width: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .frame h1 {
+        font-size: 36px;
+        bottom: 0;
+        text-align: center;
+        margin: 0 auto 1rem;
+    }
+
+    .frame p {
+        font-size: 14px;
+        text-align: center;
+        margin: 0 auto;
+        left: 0;
+        bottom: 0;
+        max-width: 800px;
+    }
+
+    .fingerprintFrame {
+        display: none; 
+    }
+}
+
+@media (max-width: 768px) {
+    .formatSection {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 30px!important;
+        height: 50vh !important; 
+
+        overflow-x: visible;
+    }
+
+    .formatContent {
+        max-width: 90%;
+        padding: 0 10px;
+        overflow-x: visible;
+    }
+
+    .formatContainer {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+        overflow-x: visible;
+    }
+
+    .fingerprintFrame {
+        bottom: 0;
+        right: 0;
+        margin: 10px 0;
+        margin-left: -20px;
+        opacity: 0.9;
+        z-index: 10;
+        overflow-x: visible;
+    }
+
+    .fingerprintImage {
+        position: relative;
+        width: 130px;
+        height: 130px;
+        right: 140px;
+        bottom: 34px;
+        overflow-x: visible;
+    }
+
+    .frame {
+        top: -150px;
+        right: 0;
+        width: 90%;
+        max-width: 340px;
+        min-height: 400px;
+        padding: 20px;
+        background-image: url('/images/framemobile.svg');
+        background-size: contain;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        z-index: 200;
+        overflow-x: visible;
+    }
+
+    .frame h1 {
+        position: relative;
+        font-size: 20px;
+        bottom: 0;
+        text-align: center;
+        margin: 10px;
+        z-index: 200;
+        overflow-x: visible;
+    }
+
+    .frame p {
+        font-size: 10px;
+        text-align: left;
+        margin: 0 auto;
+        left: 15px;
+        bottom: 0;
+        max-width: 90%;
+        margin-bottom: 20px;
+        z-index: 200;
+        overflow-x: visible;
+    }
+
+    .jeopardyFont {
+        font-size: 20px;
+        overflow-x: visible;
+    }
+}
+@media (min-width: 1490px){
+     .formatContainer {
+        flex-direction: column;
+        align-items: center;
+        min-height: 40vh;
+    }
+
+    .frame {
+        background-image: none;
+        top: 0;
+        right: 0;
+        padding: 1rem;
+        border: 3px solid #d6170d;
+        box-shadow: 10px 5px 10px #a40b0baf, 0 0 20px #c10303, 0 0 30px #df4646;
+        margin: 0 auto;
+        min-width: 600px;
+        max-width: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .frame h1 {
+        font-size: 36px;
+        bottom: 0;
+        text-align: center;
+        margin: 0 auto 1rem;
+    }
+
+    .frame p {
+        font-size: 14px;
+        text-align: center;
+        margin: 0 auto;
+        left: 0;
+        bottom: 0;
+        max-width: 800px;
+    }
+
+    .fingerprintFrame {
+        display: none; 
+    }
+}
+
+@media (max-width: 375px) {
+  .formatSection {
+    padding: 40px 15px;
+    min-height: 70vh;
+  }
+}

@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;900&display=swap');
+
+.registrationSection {
+  padding-top: 150px; 
+  min-height: 600px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden; 
+  z-index: 1; 
+  background-size: cover;
+  background-position: center bottom;
+  overflow: visible;
+}
+
+
+.content {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    overflow: visible;
+}
+
+
+.ctfTickerStrip1, .ctfTickerStrip2 {
+    background-color: #550000; 
+    width: 250vw; 
+    height: 60px; 
+    overflow: hidden; 
+    position: absolute; 
+    display: flex;
+    align-items: center; 
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.9); 
+    border: none; 
+    z-index: 5;
+}
+
+.ctfTickerStrip1 {
+    top: 60%; 
+    left: -75vw; 
+    transform: rotate(-15deg); 
+}
+
+.ctfTickerStrip2 {
+    top: 40%; 
+    left: -75vw; 
+    transform: rotate(18deg); 
+}
+
+.ctfTickerContent {
+    position: absolute;
+    white-space: nowrap; 
+    font-family: 'Orbitron', sans-serif; 
+    font-size: 2.5rem; 
+    color: #000000; 
+    animation: ctf-scroll 80s linear infinite; 
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.5); 
+    letter-spacing: 5px; 
+    user-select: none; 
+    font-weight: 600; 
+    opacity: 0.9; 
+    min-width: 200%; 
+}
+
+.ctfTickerStrip2 .ctfTickerContent {
+    animation-duration: 80s; 
+    animation-direction: reverse;
+}
+
+.buttonContainer {
+    position: relative;
+    z-index: 20; 
+    display: inline-block;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    padding: 0; 
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.buttonContainer:hover {
+    transform: scale(1.05); 
+
+}
+
+@keyframes ctf-scroll {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%); 
+    }
+}
+
+.registerButtonImage {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 28px; 
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 21;
+    transition: all 0.3s ease;
+
+    width: 500px; 
+    height: 200px; 
+    background-image: url('/images/button_register.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.registerButtonImage:hover {
+    filter: brightness(1); 
+}
+
+@media (max-width: 768px) {
+    .registrationSection {
+        padding: 150px 0;
+        min-height: 300px;
+    }
+    .registrationSection::before {
+        bottom: -50px; left: -50px; 
+        width: 150px; 
+        height: 150px;
+        background: radial-gradient(circle at bottom left, #ff0000 0%, rgba(194, 2, 2, 0.15) 30%, rgba(0, 0, 0, 0) 70%);
+        filter: blur(20px);
+    }
+    .registrationSection::after {
+        top: -50px; right: -50px; 
+        width: 120px; 
+        height: 120px;
+        background: radial-gradient(circle at top right, #ff0000 0%, rgba(194, 2, 2, 0.1) 30%, rgba(0, 0, 0, 0) 70%);
+        filter: blur(20px);
+    }
+    
+    .registerButtonImage {
+        font-size: 18px;
+        width: 400px; 
+        height: 100px; 
+    }
+    .ctfTickerStrip1, .ctfTickerStrip2 {
+        height: 45px;
+        width: 300vw; 
+        left: -100vw;
+    }
+    .ctfTickerContent {
+        font-size: 1.5rem;
+        animation-duration: 50s; 
+    }
+    .ctfTickerStrip2 .ctfTickerContent {
+        animation-duration: 50s; 
+    }
+    .ctfTickerStrip1 {
+        top: 65%; 
+        transform: rotate(-15deg); 
+    }
+    .ctfTickerStrip2 {
+        top: 35%; 
+        transform: rotate(20deg); 
+    }
+}

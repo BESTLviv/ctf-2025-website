@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Orbitron:wght@400&display=swap');
+
+.faqSection {
+  padding: 180px 10px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 50vh;
+  background: transparent;
+  background-image: url('/images/mask_back.png'),
+                    linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.2) 80%, rgba(0, 0, 0, 1) 100%);
+  background-position: right center, center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto 100%, cover;
+  background-attachment: local;
+  z-index: 1;
+}
+
+.faqSection::before {
+  display: none;
+}
+
+.content {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  overflow: visible;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  position: relative;
+  overflow: visible;
+}
+
+.text {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+.rectangles {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 600px;
+  z-index: 2;
+  padding-top: 5px;
+}
+
+
+.rectangle {
+  background-color: rgba(62, 3, 3, 0.75);
+  border: 3px solid #7d0303;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px 20px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  min-height: 60px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rectangle:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5);
+}
+
+.rectangle.active {
+  background-color: rgba(62, 3, 3, 0.9);
+}
+
+.dropdownTrigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.rectangleTitle {
+  font-family: 'Barlow', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  text-align: left;
+  white-space: normal;
+  word-break: break-word;
+  flex-grow: 1;
+  position: relative;
+  padding-left: 25px;
+  padding-top: 3px;
+}
+
+.rectangleTitle::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: #930505;
+}
+
+.triangle {
+  width: 15px;
+  height: 15px;
+  background-size: contain;
+  transition: transform 0.3s ease;
+  font-size: 15px;
+  color: #ff3333;
+  overflow: visible;
+}
+
+.triangle.rotated {
+  transform: rotate(180deg);
+  overflow: visible;
+}
+
+.dropdownContent {
+  max-height: 0;
+  padding: 0 10px;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  text-align: justify;
+}
+
+.rectangle.active .dropdownContent {
+  max-height: 200px;
+  padding: 10px;
+  text-align: justify;
+  opacity: 1;
+}
+
+.rectangleText {
+  font-family: 'Barlow', sans-serif;
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.4;
+  font-weight: 400;
+  text-align: left;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.glowBlob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(115, 3, 3, 0.478) 0%, rgba(255, 0, 0, 0) 70%);
+  filter: blur(20px);
+  border-radius: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  animation: pulse 5s infinite;
+  pointer-events: none;
+}
+
+
+@media (max-width: 1024px) {
+  .text {
+    font-size: 24px;
+  }
+
+  .rectangles {
+    max-width: 500px;
+  }
+
+  .rectangle {
+    min-height: 50px;
+    padding: 8px 15px;
+    overflow: visible;
+  }
+
+  .triangle {
+    width: 15px;
+    height: 15px;
+    font-size: 15px;
+    overflow: visible;
+  }
+
+  .glowBlob {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .faqSection {
+    padding: 50px 20px;
+    min-height: 45vh;
+    background-image: none; 
+    overflow: visible;
+  }
+
+  .text {
+    font-size: 16px;
+    overflow: visible;
+  }
+
+  .rectangles {
+    max-width: 80%;
+    overflow: visible;
+  }
+
+  .rectangle {
+    padding: 10px 10px;
+    overflow: visible;
+  }
+
+  .triangle {
+    width: 15px;
+    height: 15px;
+    font-size: 15px;
+    overflow: visible;
+  }
+
+  .rectangleTitle {
+    font-size: 15.5px;
+    overflow: visible;
+  }
+
+  .rectangleText {
+    font-size: 14.5px;
+    overflow: visible;
+  }
+
+  .glowBlob {
+    width: 200px;
+    height: 200px;
+  }
+
+  .rectangle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(255, 0, 0, 0.5);
+        overflow: visible;
+  }
+}
